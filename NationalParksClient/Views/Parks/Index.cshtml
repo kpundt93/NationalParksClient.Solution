@@ -1,0 +1,13 @@
+<h1>All National Parks:</h1>
+
+<ol>
+@foreach (Park park in Model)
+{
+  <ul>
+    <li>Name: @park.Name</li>
+    <li>State: @park.State</li>
+  </ul>
+  <a href="/Parks/Details/@(park.ParkId)"><p>View Details</p></a>
+  <br>
+}
+</ol>
