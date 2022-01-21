@@ -23,16 +23,17 @@ namespace NationalParksClient.Models
     [Required]
     [RegularExpression(@"^(?:Yes|No)$")]
     public string Visited { get; set; }
-  }
 
-  public static List<Park> GetParks()
-  {
-    var apiCallTask = ApiHelper.GetAll();
-    var result = apiCallTask.Result;
+    public static List<Park> GetParks()
+    {
+      var apiCallTask = ApiHelper.GetAll();
+      var result = apiCallTask.Result;
 
-    JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
-    List<Park> parkList = JsonConvert.DeserializeObject<List<Park>>(jsonResponse.ToString());
+      JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+      List<Park> parkList = JsonConvert.DeserializeObject<List<Park>>(jsonResponse.ToString());
 
-    return parkList;
+      return parkList;
+    }
+    
   }
 }
