@@ -1,0 +1,16 @@
+@using NationalParksClient.Models;
+
+<h1>Park Info:</h1>
+<ul>
+  <li>ID: @Model.ParkId</li>
+  <li>Name: @Model.Name</li>
+  <li>State: @Model.State</li>
+  <li>Description: @Model.Description</li>
+  <li>Visited: @Model.Visited</li>
+</ul>
+<br>
+
+<a href="/Parks/Edit/@(Model.ParkId)"><p>Edit</p></a>
+<br>
+
+<a href="/Parks"><p>Return</p></a>
