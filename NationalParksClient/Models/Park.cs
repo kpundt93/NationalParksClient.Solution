@@ -45,6 +45,5 @@ namespace NationalParksClient.Models
 
       return park;
     }
-
   }
 }
