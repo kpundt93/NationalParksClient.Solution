@@ -12,8 +12,14 @@ namespace NationalParksClient.Controllers
   {
     public IActionResult Index()
     {
-      var allTrails = Park.GetParks();
-      return View(allTrails);
+      var allParks = Park.GetParks();
+      return View(allParks);
+    }
+
+    public IActionResult Details(int id)
+    {
+      var park = Park.GetDetails(id);
+      return View(park);
     }
 
   }
